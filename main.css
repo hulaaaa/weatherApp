@@ -5,7 +5,7 @@
     outline: 0;
 }
 body{
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -14,6 +14,7 @@ body{
     background-image: url(./assets/bg.png);
     background-repeat: no-repeat;
     background-size: cover;
+    padding-bottom: 50px;
 }
 
 
@@ -40,7 +41,8 @@ body{
 }
 #mainDiv{
     width: 70%;
-    height: 70%;
+    height: 750px;
+    
     background: rgb(0, 0, 0,0.2);
     backdrop-filter: blur(16px);
     border-radius: 1.2rem;
@@ -148,154 +150,8 @@ body{
 
 
 
-
-
-
-
-
-
-
-
-
-
-/* MEDIA PHONE */
-@media screen and (max-width:500px){
-
-    #searchDiv{
-        background: rgb(0, 0, 0,0.2);
-        backdrop-filter: blur(16px);
-        border-radius: 1.2rem;
-        width: 80%;
-        height: 5rem;
-        text-align: center;
-        font-family: 'Poppins', sans-serif;
-        font-weight: 600;
-        font-size: 1.3rem;
-        color: rgba(255, 255, 255, 0.5);
-        margin-bottom: 1.4rem;
-    }
-    #searchDiv::placeholder{
-        text-align: center;
-        font-family: 'Poppins', sans-serif;
-        font-weight: 600;
-        font-size: 1.3rem;
-        color: rgba(255, 255, 255, 0.3);
-    }
-    #mainDiv{
-        width: 80%;
-        background: rgb(0, 0, 0,0.2);
-        backdrop-filter: blur(16px);
-        border-radius: 1.2rem;
-    }
-    #header{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 2rem 1.5rem;
-        gap: 1rem;
-    }
-    #imgWeather{
-        opacity: 0.7;
-    }
-    #liDiv{
-        display: flex;
-        flex-direction: column;
-        opacity: 1;
-        gap: 0.3rem;
-    }
-    #city{
-        position: relative;
-        font-family: 'Poppins';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 1.7rem;
-        opacity: 1;
-        color: rgba(255, 255, 255, 0.9);
-    }
-    #date{
-        position: relative;
-        font-family: 'Poppins';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 1rem;
-        opacity: 1;
-        color: rgba(255, 255, 255, 0.9);
-    }
-    .centerApp{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        font-weight: 300;
-        font-size: 1.2rem;
-        color: rgba(255, 255, 255, 0.9);
-    }
-    #temp{
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-    }
-    #tempMain{
-        margin: 0;
-        padding: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: 'Poppins';
-        font-style: normal;
-        font-weight: 300;
-        font-size: 5rem;
-        height: fit-content;
-        opacity: 1;
-        color: rgba(255, 255, 255, 0.9);
-    }
-    #symbTemp{
-        margin-top: 0.5rem;
-    }
-
-    .footerApp{
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        justify-content:start;
-        gap: 1rem;
-    }
-    .subDiv{
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        padding: 0rem 2rem;
-        gap: 1rem;
-
-        /* justify-content: space-between; */
-        display: none;
-    }
-    .subDiv-p{
-        display: flex;
-        flex-direction: row;
-        /* align-items: center; */
-    }
-    .pDiv{
-        font-style: normal;
-        font-weight: 400;
-        font-size: 1rem;
-        color: rgba(255, 255, 255, 0.9);
-    }
-    .p2{
-        width: fit-content;
-        height: fit-content;
-        font-family: 'Poppins';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 1rem;
-        color: rgba(255, 255, 255, 0.9);
-    }
-
-}
-
-
 /* MEDIA TABLET */
-@media screen and (max-width:900px){
+@media only screen and (max-width:900px){
 
     #searchDiv{
         margin-top: 1.5rem;
@@ -395,7 +251,7 @@ body{
         display: flex;
         flex-direction: column;
         gap: 3rem;
-        margin-top: 2.5rem;
+        margin: 2.5rem 0;
     }
     .subDiv{
         display: flex;
@@ -425,4 +281,140 @@ body{
         font-size: 1.3rem;
         color: rgba(255, 255, 255, 0.9);
     }
+}
+
+/* MEDIA PHONE */
+@media only screen and (max-width:500px){
+
+    #searchDiv{
+        background: rgb(0, 0, 0,0.2);
+        backdrop-filter: blur(16px);
+        border-radius: 1.2rem;
+        width: 80%;
+        height: 5rem;
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 1.3rem;
+        color: rgba(255, 255, 255, 0.5);
+        margin-bottom: 1.4rem;
+    }
+    #searchDiv::placeholder{
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 1.3rem;
+        color: rgba(255, 255, 255, 0.3);
+    }
+    #mainDiv{
+        width: 80%;
+        background: rgb(0, 0, 0,0.2);
+        backdrop-filter: blur(16px);
+        border-radius: 1.2rem;
+    }
+    #header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        gap: 0.5rem;
+    }
+    #imgWeather{
+        opacity: 0.7;
+    }
+    #liDiv{
+        display: flex;
+        flex-direction: column;
+        opacity: 1;
+        gap: 0.3rem;
+    }
+    #city{
+        position: relative;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1rem;
+        opacity: 1;
+        color: rgba(255, 255, 255, 0.9);
+    }
+    #date{
+        position: relative;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 0.5rem;
+        opacity: 1;
+        color: rgba(255, 255, 255, 0.9);
+    }
+    .centerApp{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-weight: 300;
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.9);
+    }
+    #temp{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    #tempMain{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 5rem;
+        height: fit-content;
+        opacity: 1;
+        color: rgba(255, 255, 255, 0.9);
+    }
+    #symbTemp{
+        margin-top: 0.2rem;
+    }
+
+    .footerApp{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content:start;
+        padding: 0 0 2rem 0;
+        gap: 1rem;
+    }
+    .subDiv{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding: 0rem 2rem;
+        gap: 1rem;
+
+        /* justify-content: space-between; */
+        display: none;
+    }
+    .subDiv-p{
+        display: flex;
+        flex-direction: row;
+        /* align-items: center; */
+    }
+    .pDiv{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.9);
+    }
+    .p2{
+        width: fit-content;
+        height: fit-content;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.9);
+    }
+
 }
